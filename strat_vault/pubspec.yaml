@@ -38,6 +38,8 @@ dependencies:
   google_nav_bar: ^5.0.7
   google_fonts: ^6.2.1
   flutter_native_splash: ^2.4.4
+  provider: ^6.1.2
+  hidden_drawer_menu: ^3.0.1
 
 dev_dependencies:
   flutter_test:
@@ -95,10 +97,27 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+  fonts:
+   - family: Counter
+     fonts:
+       - asset: fonts/Counter Stream.ttf
+
+   - family: Penrise
+     fonts:
+       - asset: fonts/Penrise.ttf
+
+   - family: Camcode
+     fonts:
+       - asset: fonts/Camcode.ttf
+
+   - family: Cyber Grunge Regular
+     fonts:
+       - asset: fonts/Cyber Grunge Regular.ttf
+
+   - family: Tech Hard Grunge
+     fonts:
+       - asset: fonts/Tech Hard Grunge.ttf
+           
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
