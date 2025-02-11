@@ -3,26 +3,30 @@ import 'package:strat_vault/models/map.dart';
 
 class MapTile extends StatelessWidget {
   final CSMap map;
-  const MapTile({super.key, required this.map});
+  final void Function()? onTap;
+  const MapTile({super.key, required this.map, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(20),
-        ),
-        margin: const EdgeInsets.all(5.0),
-        child : Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          
-          children: [
-            const SizedBox(height: 10),            
-            Image.asset(map.imagePath, height: 300, fit: BoxFit.fill,),
-            const SizedBox(height: 10),
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(20),
+          ),
+          margin: const EdgeInsets.all(5.0),
+          child : Column(
             
-          ],
-        )
+            children: [
+
+              const SizedBox(height: 10),            
+              Image.asset(map.imagePath, height: 200),
+              const SizedBox(height: 10),
+              
+            ],
+          )
+      ),
     );
   }
 }
