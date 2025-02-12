@@ -11,22 +11,25 @@ class MapTile extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
+        width: 150,
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(20),
+            boxShadow: [
+              BoxShadow(
+                color: const Color.fromARGB(255, 0, 0, 0).withOpacity(0.5),
+                spreadRadius: 5,
+                blurRadius: 5,
+                offset: const Offset(0, 3), 
+              ),
+            ],
           ),
           margin: const EdgeInsets.all(5.0),
-          child : Column(
-            
-            children: [
-
-              const SizedBox(height: 10),            
-              Image.asset(map.imagePath, height: 200),
-              const SizedBox(height: 10),
-              
-            ],
-          )
-      ),
-    );
+          child :
+              ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Image.asset(map.imagePath,fit: BoxFit.cover),),
+          ),
+      );
   }
 }
