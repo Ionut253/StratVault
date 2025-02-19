@@ -11,6 +11,7 @@ class HomePage extends StatefulWidget {
 
   @override
   State<HomePage> createState() => _HomePageState();
+
 }
 
 class _HomePageState extends State<HomePage> {
@@ -32,154 +33,148 @@ class _HomePageState extends State<HomePage> {
   ));
   }
 
-
   final scaffoldKey = GlobalKey<ScaffoldState>();
-
+  
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      key: scaffoldKey,
-      extendBodyBehindAppBar: true,
-      backgroundColor: const Color.fromARGB(255, 109, 120, 109),
-      drawer: Drawer(
-        
-        backgroundColor: const Color.fromARGB(23, 49, 55, 49),
-        child:  Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(colors: [
-              Color.fromARGB(255, 3, 6, 3),
-              Color.fromARGB(0, 240, 250, 240),
-            ], begin: Alignment.topLeft, end: Alignment.topRight),
-          ),
-          child: Column(
-            children: [
-              const SizedBox(height: 50),
-          
-              ListTile(
-                title: const Text('SETTINGS',
-                 style: TextStyle(
-                  color: Colors.white,
-                  fontFamily: 'Camcode',
-                  letterSpacing: 3
-                  ) , ),
-                leading: const Icon(Icons.settings, color: Colors.white),
-                enableFeedback: false,
-                onTap: () {
-                  // go on settings page
-                },
-              ),
-          
-              ListTile(
-                title: const Text('ABOUT',
-                 style: TextStyle(
-                  color: Colors.white,
-                  fontFamily: 'Camcode',
-                  letterSpacing: 3
-                  ) 
-                  ),
-                leading: const Icon(Icons.info, color: Colors.white),
-                enableFeedback: false,
-                onTap: () {
-                  // go on about page
-                },
+
+    final Size size = MediaQuery.of(context).size;
+
+    return SizedBox(
+      height: size.height,
+      child: Scaffold(
+          key: scaffoldKey,
+          extendBodyBehindAppBar: true,
+          backgroundColor: const Color.fromARGB(255, 109, 120, 109),
+          drawer: SizedBox(
+            height: size.height,
+            child: Drawer(
+              backgroundColor: const Color.fromARGB(23, 49, 55, 49),
+              
+              child:  Container(
+                decoration: const BoxDecoration(
+                  gradient: LinearGradient(colors: [
+                    Color.fromARGB(255, 3, 6, 3),
+                    Color.fromARGB(0, 240, 250, 240),
+                  ], begin: Alignment.topLeft, end: Alignment.topRight),
+                ),
+                child: Column(
+                  children: [
+                    SizedBox(height: size.height * 0.05),
+                
+                    ListTile(
+                      title: const Text('SETTINGS',
+                       style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'Camcode',
+                        letterSpacing: 3
+                        ) , ),
+                      leading: const Icon(Icons.settings, color: Colors.white),
+                      enableFeedback: false,
+                      onTap: () {
+                        // go on settings page
+                      },
+                    ),
+                
+                    ListTile(
+                      title: const Text('ABOUT',
+                       style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'Camcode',
+                        letterSpacing: 3
+                        ) 
+                        ),
+                      leading: const Icon(Icons.info, color: Colors.white),
+                      enableFeedback: false,
+                      onTap: () {
+                        // go on about page
+                      },
+                    ),
+                    
+                    ListTile(
+                      title: const Text('CONTACTS', style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'Camcode',
+                        letterSpacing: 3
+                        )),
+                      leading: const Icon(Icons.contact_mail, color: Colors.white),
+                      enableFeedback: false,
+                      onTap: () {
+                        // go on contacts page
+                      },
+                    ),
+                  
+                  SizedBox(height: size.height * 0.7),
+                
+                   Padding(
+                      padding: EdgeInsets.only(top: size.height * 0.004, right: 20),
+                      child: const Text(
+                            ' StratVault',
+                            style: TextStyle (
+                              color: Color.fromARGB(255, 0, 0, 0),
+                              fontSize: 17,
+                              fontFamily: 'Penrise',
+                              letterSpacing: 2,
+                            ),
+                          ),
+                    ),
+                  ],
+                ),
               ),
               
-              ListTile(
-                title: const Text('CONTACTS', style: TextStyle(
-                  color: Colors.white,
-                  fontFamily: 'Camcode',
-                  letterSpacing: 3
-                  )),
-                leading: const Icon(Icons.contact_mail, color: Colors.white),
-                enableFeedback: false,
-                onTap: () {
-                  // go on contacts page
-                },
-              ),
-            
-              const SizedBox(height: 515),
-          
-              const Padding(
-                padding: EdgeInsets.only(top: 42, right: 20),
-                child: Text(
-                      ' StratVault',
-                      style: TextStyle (
-                        color: Color.fromARGB(255, 0, 0, 0),
-                        fontSize: 17,
-                        fontFamily: 'Penrise',
-                        letterSpacing: 2,
-                      ),
-                    ),
-              ),
-            ],
-          ),
-        ),
-        
-      ),
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        leading: IconButton(
-          style: const ButtonStyle(
-            enableFeedback: false,
-          ),
-          icon: Padding(
-            padding: const EdgeInsets.only(right: 10),
-            child: Image.asset('lib/images/menu.png', color: const Color.fromARGB(255, 255, 255, 255), width: 25, height: 25,),
-          ),
-          onPressed: () {
-            scaffoldKey.currentState!.openDrawer();
-          },
-        ),
-        elevation: 0,
-        title: const Padding(
-          padding:  EdgeInsets.only(left:20.0),
-          child:  Text('MAP POOL', style: TextStyle(
-            color:  Color.fromARGB(255, 255, 255, 255),
-            fontSize: 25,
-            fontFamily: 'Penrise',
-          ),),
-        ),
-        centerTitle: true,
-
-      
-    ),
-      body: Container(
-          decoration: const BoxDecoration(
-            gradient:  LinearGradient(colors: [
-              Color.fromARGB(255, 56, 66, 56),
-              Color.fromARGB(255, 109, 120, 109),
-             
-            ], begin: Alignment.topCenter, end: Alignment.center),
-          ),
-          child: Center(
-            child: Column(
-            
-              children: [
-                const SizedBox(height: 100),
-            
-                Expanded(child: ListView.builder(
-                    padding: const EdgeInsets.all(10),
-                    scrollDirection: Axis.horizontal,
-                    itemCount: maps.length - 4,
-                    itemBuilder: (context, index) => MapTile(map: maps[index], onTap: () => navigateToMapPage(maps[index]),),
-                  ),
-                ),
-            
-                Expanded(child: ListView.builder(
-                    padding: const EdgeInsets.all(10),
-                    scrollDirection: Axis.horizontal,
-                    itemCount: maps.length - 4 ,
-                    itemBuilder: (context, index) => MapTile(map: maps[index + 4], onTap: () => navigateToMapPage(maps[index + 4]),),
-                  ),
-                ),
-            
-            
-              ],
             ),
           ),
+          appBar: AppBar(
+            backgroundColor: Colors.transparent,
+            leading: IconButton(
+              style: const ButtonStyle(
+                enableFeedback: false,
+              ),
+              icon: Padding(
+                padding: const EdgeInsets.only(right: 10),
+                child: Image.asset('lib/images/menu.png', color: const Color.fromARGB(255, 255, 255, 255), width: 25, height: 25,),
+              ),
+              onPressed: () {
+                scaffoldKey.currentState!.openDrawer();
+              },
+            ),
+            elevation: 0,
+            title: const Padding(
+              padding:  EdgeInsets.only(left:20.0),
+              child:  Text('MAP POOL', style: TextStyle(
+                color:  Color.fromARGB(255, 255, 255, 255),
+                fontSize: 25,
+                fontFamily: 'Penrise',
+              ),),
+            ),
+            centerTitle: true,
         ),
-      );
-    
+          body: Center(
+                child: Column(
+                
+                  children: [
+                    const SizedBox(height: 100),
+                    Expanded(child: ListView.builder(
+                        padding: const EdgeInsets.all(10),
+                        scrollDirection: Axis.horizontal,
+                        itemCount: maps.length - 4,
+                        itemBuilder: (context, index) => MapTile(map: maps[index], onTap: () => navigateToMapPage(maps[index]),),
+                      ),
+                    ),
+                
+                    Expanded(child: ListView.builder(
+                        padding: const EdgeInsets.all(10),
+                        scrollDirection: Axis.horizontal,
+                        itemCount: maps.length - 4 ,
+                        itemBuilder: (context, index) => MapTile(map: maps[index + 4], onTap: () => navigateToMapPage(maps[index + 4]),),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+    );
+
       // bottomNavigationBar: GNav(
       //   padding: const EdgeInsets.all(10),
       //   gap: 8,
@@ -195,7 +190,5 @@ class _HomePageState extends State<HomePage> {
       //     GButton(icon: Icons.settings, text: 'Settings'),
       //   ],
       // ),
-
   }
 }
-
