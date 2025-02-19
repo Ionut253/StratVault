@@ -62,100 +62,119 @@ class _IntroPageState extends State<IntroPage> {
 
   @override
   Widget build(BuildContext context) {
+
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
+
     if (_isLoading) {
-      return const Scaffold(
-        backgroundColor: Colors.black,
-        body: Center(child: CircularProgressIndicator()), // Placeholder while loading
+      return GestureDetector(
+        onTap: () {
+          Navigator.pushNamed(context, '/homepage');
+        },
+        child: const Scaffold(
+          backgroundColor: Colors.black,
+          body: Center(child: CircularProgressIndicator()), // Placeholder while loading
+        ),
       );
     }
-    return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 80, 88, 80),
-      body: Padding(
-        padding: const EdgeInsets.all(20.0),
-        
+    return SizedBox(
+      height: screenHeight,
+      child: Scaffold(
+        backgroundColor: const Color.fromARGB(255, 80, 88, 80),
+        body: SizedBox(
+          height: screenHeight,
+          width: screenWidth,
           child: Center(
-            child: Column(
-              
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                const SizedBox(height: 40),
-            
-                // app name 
-                const Padding(
-                  padding: EdgeInsets.only(bottom:40.0),
-                  child: Text(
-                      ' StratVault',
-                      style: TextStyle (
-                        color: Color.fromARGB(255, 255, 255, 255),
+                child: Column(
+                  
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                   Padding(
+                     padding: EdgeInsets.only(top: screenHeight * 0.04, bottom: screenHeight * 0.05),
+                     child: const Text(
+                            ' StratVault',
+                            style: TextStyle (
+                              color: Color.fromARGB(255, 255, 255, 255),
+                              fontSize: 20,
+                              fontFamily: 'Penrise',
+                              letterSpacing: 1.5
+                            ),
+                      ),
+                   ),
+                    
+                    SizedBox(height: screenHeight * 0.25),
+                
+                    // logo 
+                    SizedBox(
+                      height: screenHeight * 0.3,
+                      width: screenWidth * 0.5,
+                      child: Image.asset('lib/images/logo_aplicatie_2.png', alignment: Alignment.center, fit: BoxFit.fill,)),
+                    const Text(
+                      'YOUR SECRET WEAPON IN CS2',
+                      style: TextStyle(
+                        color:  Color.fromARGB(255, 191, 191, 191),
                         fontSize: 20,
-                        fontFamily: 'Penrise',
-                        letterSpacing: 1.5
+                        fontFamily: 'Tech Hard Grunge',
                       ),
                     ),
-                ),
                 
-                const SizedBox(height: 10),
-            
-                // logo 
-                Padding(
-                  padding: const EdgeInsets.only(left:30.0, right: 50.0, top: 70.0, bottom: 10.0),
-                  child: Image.asset('lib/images/logo_aplicatie_2.png', height: 300, width: 300, alignment: Alignment.center,),
-                  
-                ),
-            
-                const Text(
-                  'YOUR SECRET WEAPON IN CS2',
-                  style: TextStyle(
-                    color:  Color.fromARGB(255, 191, 191, 191),
-                    fontSize: 20,
-                    fontFamily: 'Tech Hard Grunge',
-                  ),
-                ),
-            
-            
-                const SizedBox(height: 5),
-            
-            
-                const Padding(
-                  padding: EdgeInsets.only(left: 20, right: 20, bottom: 5),
-                  child:  Text(
-                    'Explore the best CS2 lineups, tactics, and strategies for every map. From pixel-perfect smokes to deadly executes, this app gives you the winning edge in every match.',
-                    style: TextStyle(
-                      color: Color.fromARGB(255, 187, 187, 187),
-                      fontSize: 8,
-                      height: 1.5,
-                      fontFamily: 'Camcode',
-                      
-                  
+                  const SizedBox(
+                      width: 300,
+                      child: Text(
+                            'Explore the best CS2 lineups, tactics, and strategies for every map. From pixel-perfect smokes to deadly executes, this app gives you the winning edge in every match.',
+                            style: TextStyle(
+                              color: Color.fromARGB(255, 187, 187, 187),
+                              fontSize: 8,
+                              height: 1.5,
+                              fontFamily: 'Camcode',
+                              
+                          
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
                     ),
-                    textAlign: TextAlign.center,
+                
+                  SizedBox(height: screenHeight * 0.03),
+                
+                  Column(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(left: 8.0, right:8.0, top: screenHeight * 0.0013,bottom: 0),
+                        child: MyButton(text: 'Get Started', onTap: () {
+                          _savePreferences();
+                          navigateToHomePage();
+                          }),
+                      ),
+                      
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        
+                        children: [
+                          Checkbox(
+                                value: _DontShowAgain,
+                                activeColor: Colors.grey.shade800,
+                                overlayColor: WidgetStateProperty.all(Colors.transparent),
+                                onChanged: (value) {
+                                  setState(() {
+                                    _DontShowAgain = value ?? false;
+                                  });
+                                },
+                              ),
+                          const Text(
+                                "Don't show again",
+                                style: TextStyle(color: Colors.white),
+                              ),
+                        ],
+                      ),
+                    ],
                   ),
-                ),
-            
-              const SizedBox(height: 30),
-            
-              MyButton(text: 'Get Started', onTap: () {
-                _savePreferences();
-                navigateToHomePage();
-                }),
-              Checkbox(
-                  value: _DontShowAgain,
-                  onChanged: (value) {
-                    setState(() {
-                      _DontShowAgain = value ?? false;
-                    });
-                  },
-                ),
-              const Text(
-                  "Don't show again",
-                  style: TextStyle(color: Colors.white),
-                ),
-                ],
-                ),
-          ),
-        )
-      );
+                    ],
+                    ),
+              ),
+            ),
+        ),
+    );
   }
 }
 
