@@ -4,7 +4,6 @@ import 'package:strat_vault/components/videoplayer.dart';
 import 'package:strat_vault/models/map.dart';
 import 'package:flutter/material.dart';
 import 'package:strat_vault/pages/utility_page.dart';
-import 'package:video_player/video_player.dart';
 
 class MapPage extends StatefulWidget {
   final CSMap map;
@@ -160,12 +159,15 @@ Widget _buildUtilityList() {
                           color: Colors.green,
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        child: Text(
+                        child:
+                        entry.key == '' ? const Text('No utility available', style: TextStyle(color: Colors.white, fontSize: 16)) :
+                        Text(
                           entry.key, 
                           style: const TextStyle(color: Colors.white, fontSize: 16),
                         ),
                       ),
                       onTap: () {
+                        entry.key == '' ? () :
                         Navigator.push(
                           context,
                           MaterialPageRoute(
