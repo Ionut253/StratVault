@@ -99,8 +99,14 @@ flutter:
     - lib/images/ancient/flashes/
     - lib/images/ancient/mollys/
     - lib/images/ancient/smokes/
-
-
+    - lib/images/dust2/
+    - lib/images/dust2/flashes/
+    - lib/images/dust2/mollys/
+    - lib/images/dust2/smokes/
+    - lib/images/nuke/
+    - lib/images/nuke/flashes/
+    - lib/images/nuke/mollys/
+    - lib/images/nuke/smokes/
     
   
   #   - images/a_dot_ham.jpeg
