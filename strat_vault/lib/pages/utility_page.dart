@@ -4,10 +4,10 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:strat_vault/pages/map_page.dart';
 
 class UtilityPage extends StatefulWidget {
-  String utilityName;
-  List<String> utilityItems;
+  final String utilityName;
+  final List<String> utilityItems;
 
-  UtilityPage({super.key, required this.utilityName, required this.utilityItems});
+  const UtilityPage({super.key, required this.utilityName, required this.utilityItems});
 
   @override
   State<UtilityPage> createState() => _UtilityPageState();
@@ -39,6 +39,7 @@ class _UtilityPageState extends State<UtilityPage> {
         child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              const SizedBox(height: 20),
               CarouselSlider.builder(
                 itemCount:  widget.utilityItems.length,
                 itemBuilder: (context, index, realIndex) {
@@ -59,6 +60,19 @@ class _UtilityPageState extends State<UtilityPage> {
                 },
                 child: const Text("Close"),
               ),
+              const SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset('lib/images/hint_icon.png', width: 15, height: 15),
+                  const SizedBox(width: 10),
+                  const Text(
+                    'You can zoom in and out',
+                    style: TextStyle(
+                      color:Colors.black,
+                      fontSize: 15))
+                ]
+                  ),
             ],
           ),
       );
