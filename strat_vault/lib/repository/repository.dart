@@ -116,73 +116,299 @@ CSMap(name: 'Dust 2', imagePath: 'lib/images/maps/dust2.jpg',
      calloutsPath: 'lib/images/callouts/dust2_callouts.png',
      utils: Map<String, dynamic>.from({
         'Smokes': {
-          'A': {
-            'A1': 'Smoke',
-            'A2': 'Smoke',
-            'A3': 'Smoke',
-          },
-          'B': {
-            'B1': 'Smoke',
-            'B2': 'Smoke',
-            'B3': 'Smoke',
-          },
-        },
-        'Flashes': {
-          'A': {
-            'A1': 'Flash',
-            'A2': 'Flash',
-            'A3': 'Flash',
-          },
-          'B': {
-            'B1': 'Flash',
-            'B2': 'Flash',
-            'B3': 'Flash',
-          },
-        },
-     }),
-     strats: Map<String, dynamic>.from({
-       'A': {
-          'execA': ['lib/images/callouts/callouts_anubis.png', 'lib/images/callouts/inferno_callouts.png', 'lib/images/LampaArsa.mp4'],
-          'fakeB': ['lib/images/callouts/callouts_anubis.png', 'lib/images/callouts/inferno_callouts.png', 'lib/images/LampaArsa.mp4'],
-          'fakec': ['lib/images/callouts/callouts_anubis.png', 'lib/images/callouts/inferno_callouts.png', 'lib/images/LampaArsa.mp4'],
-          'faked': ['lib/images/callouts/callouts_anubis.png', 'lib/images/callouts/inferno_callouts.png', 'lib/images/LampaArsa.mp4'],
-          'fakee': ['lib/images/callouts/callouts_anubis.png', 'lib/images/callouts/inferno_callouts.png', 'lib/images/LampaArsa.mp4'],
-          
-        },
-        'B': {
-          'strat1': ['lib/images/callouts/callouts_anubis.png', 'lib/images/callouts/inferno_callouts.png', 'lib/images/LampaArsa.mp4'],
-          'strat2': ['lib/images/callouts/callouts_anubis.png', 'lib/images/callouts/inferno_callouts.png', 'lib/images/LampaArsa.mp4'],
-        },
-     }),
-
-     ),
+      'A': {
+        'Combo Short':[
+          'lib/images/dust2/smokes/combo_short.png',
+          'lib/images/dust2/smokes/combo_short1.png',
+          'lib/images/dust2/smokes/combo_short2.png',
+          'lib/images/dust2/smokes/combo_short3.png',
+          'lib/images/dust2/smokes/combo_short.mp4'
+        ],
+        'Cross Smoke': [
+          'lib/images/dust2/smokes/cross_smoke.png',
+          'lib/images/dust2/smokes/cross_smoke1.png',
+          'lib/images/dust2/smokes/cross_smoke.mp4'
+        ],
+        'CT Smoke from Short': [
+          'lib/images/dust2/smokes/ct_smoke_from_short.png',
+          'lib/images/dust2/smokes/ct_smoke_from_short1.png',
+          'lib/images/dust2/smokes/ct_smoke_from_short.mp4'
+        ],
+        'Deep CT from Long':[
+          'lib/images/dust2/smokes/deep_ct.png',
+          'lib/images/dust2/smokes/deep_ct1.png',
+          'lib/images/dust2/smokes/deep_ct.mp4'
+        ],
+        'Long Corner Smoke': [
+          'lib/images/dust2/smokes/long_corner_smoke.png',
+          'lib/images/dust2/smokes/long_corner_smoke1.png',
+          'lib/images/dust2/smokes/long_corner_smoke.mp4'
+        ],
+        'Long Smoke':[
+          'lib/images/dust2/smokes/long_smoke.png',
+          'lib/images/dust2/smokes/long_smoke1.png',
+          'lib/images/dust2/smokes/long_smoke.mp4'
+        ],
+        'Mid Doors Smoke':[
+          'lib/images/dust2/smokes/mid_doors_smoke.png',
+          'lib/images/dust2/smokes/mid_doors_smoke1.png',
+          'lib/images/dust2/smokes/mid_doors_smoke.mp4'
+        ],
+        'Short Smoke From Long':[
+          'lib/images/dust2/smokes/short_smoke_from_long.png',
+          'lib/images/dust2/smokes/short_smoke_from_long1.png',
+          'lib/images/dust2/smokes/short_smoke_from_long.mp4'
+        ],
+      },
+      'B': {
+        'B Doors Smoke From Catwalk':[
+          'lib/images/dust2/smokes/b_doors_from_catwalk.png',
+          'lib/images/dust2/smokes/b_doors_from_catwalk1.png',
+          'lib/images/dust2/smokes/b_doors_from_catwalk.mp4'
+        ],
+        'Deep Doors Smoke':[
+          'lib/images/dust2/smokes/deep_doors.png',
+          'lib/images/dust2/smokes/deep_doors1.png',
+          'lib/images/dust2/smokes/deep_doors.mp4'
+        ],
+        'Doors Smoke':[
+          'lib/images/dust2/smokes/doors_smoke.png',
+          'lib/images/dust2/smokes/doors_smoke1.png',
+          'lib/images/dust2/smokes/doors_smoke.mp4'
+        ],
+        'Left Mid Smoke':[
+          'lib/images/dust2/smokes/left_mid_smoke.png',
+          'lib/images/dust2/smokes/left_mid_smoke1.png',
+          'lib/images/dust2/smokes/left_mid_smoke.mp4'
+        ],
+        'Window Smoke': [
+          'lib/images/dust2/smokes/window_smoke.png',
+          'lib/images/dust2/smokes/window_smoke1.png',
+          'lib/images/dust2/smokes/window_smoke.mp4'
+        ],
+        'Lurk B Smoke':[
+          'lib/images/dust2/smokes/lurk_b_smoke.png',
+          'lib/images/dust2/smokes/lurk_b_smoke1.png',
+          'lib/images/dust2/smokes/lurk_b_smoke.mp4'
+        ],
+        'Mid to B Smoke': [
+          'lib/images/dust2/smokes/mid_to_b.png',
+          'lib/images/dust2/smokes/mid_to_b1.png',
+          'lib/images/dust2/smokes/mid_to_b.mp4'
+        ],
+        'Mid to B Smoke from Catwalk ':[
+          'lib/images/dust2/smokes/mid_to_b_from_catwalk.png',
+          'lib/images/dust2/smokes/mid_to_b_from_catwalk1.png',
+          'lib/images/dust2/smokes/mid_to_b_from_catwalk.mp4'
+        ],
+        'Xbox Smoke': [
+          'lib/images/dust2/smokes/xbox_smoke.png',
+          'lib/images/dust2/smokes/xbox_smoke1.png',
+          'lib/images/dust2/smokes/xbox_smoke.mp4'
+        ],
+      },
+    },
+    'Flashes': {
+      'A': {
+        'Site Flash from Short': [
+          'lib/images/dust2/flashes/a_flash_from_short.mp4'
+        ],
+        'Late Long Flash': [
+          'lib/images/dust2/flashes/late_long_flash.png',
+          'lib/images/dust2/flashes/late_long_flash1.png',
+          'lib/images/dust2/flashes/late_long_flash.mp4'
+        ],
+        'Pop Flash Long': [
+          'lib/images/dust2/flashes/pop_flash_long.png',
+          'lib/images/dust2/flashes/pop_flash_long1.png',
+          'lib/images/dust2/flashes/pop_flash_long.mp4'
+        ],
+        'Retake Long Flash':[
+          'lib/images/dust2/flashes/retake_long_flash.mp4',
+        ],
+        'Rush Long Flash':[
+          'lib/images/dust2/flashes/rush_long_flash.png',
+          'lib/images/dust2/flashes/rush_long_flash1.png',
+          'lib/images/dust2/flashes/rush_long_flash.mp4'
+        ],
+        'Short Flash': [
+          'lib/images/dust2/flashes/short_flash.png',
+          'lib/images/dust2/flashes/short_flash1.png',
+          'lib/images/dust2/flashes/short_flash.mp4'
+        ],
+      },
+      'B': {
+        'B Flash from Tunnel': [
+          'lib/images/dust2/flashes/b_flash.mp4'
+        ],
+        'Mid to B Flash': [
+          'lib/images/dust2/flashes/mid_flash.png',
+          'lib/images/dust2/flashes/mid_flash1.png',
+          'lib/images/dust2/flashes/mid_flash.mp4'
+        ],
+        'Retake B Flash': [
+          'lib/images/dust2/flashes/retake_b_flash.png',
+          'lib/images/dust2/flashes/retake_b_flash1.png',
+          'lib/images/dust2/flashes/retake_b_flash.mp4'
+        ],
+      },
+    },
+    'Mollys': {
+      'A': {
+        'Site Molly from Short': [
+          'lib/images/dust2/mollys/molly_site_from_short.png',
+          'lib/images/dust2/mollys/molly_site_from_short.mp4'
+        ],
+        'Car Molly from Long': [
+          'lib/images/dust2/mollys/car_molly_from_long.png',
+          'lib/images/dust2/mollys/car_molly_from_long.mp4'
+        ],
+      },
+      'B': {
+        'Back Plat Molly': [
+          'lib/images/dust2/mollys/back_plat_molly.png',
+          'lib/images/dust2/mollys/back_plat_molly.mp4'
+        ],
+        'Molly Site': [
+          'lib/images/dust2/mollys/molly_site.png',
+          'lib/images/dust2/mollys/molly_site.mp4'
+        ],
+        'Tunnel Molly':[
+          'lib/images/dust2/mollys/tunnel_molly.png',
+          'lib/images/dust2/mollys/tunnel_molly.mp4'
+        ]
+      },
+      
+    },
+  }),
+  strats: Map<String, dynamic>.from({}),
+),
 CSMap(name: 'Nuke', imagePath: 'lib/images/maps/nuke.jpg',
      calloutsPath: 'lib/images/callouts/nuke_callouts.png',
      utils: Map<String, dynamic>.from({
         'Smokes': {
           'A': {
-            'A1': 'Smoke',
-            'A2': 'Smoke',
-            'A3': 'Smoke',
+            'Deep Outside Smokes': [
+              'lib/images/nuke/smokes/garage_outside_smokes.png',
+              'lib/images/nuke/smokes/garage_outside_smokes1.png',
+              'lib/images/nuke/smokes/garage_outside_smokes2.png',
+              'lib/images/nuke/smokes/garage_outside_smokes.mp4'
+            ],
+            'Garage Smoke': [
+              'lib/images/nuke/smokes/garage_smoke.png',
+              'lib/images/nuke/smokes/garage_smoke1.png',
+              'lib/images/nuke/smokes/garage_smoke.mp4'
+            ],
+            'Heaven Smoke': [
+              'lib/images/nuke/smokes/heave_smoke.png',
+              'lib/images/nuke/smokes/heave_smoke1.png',
+              'lib/images/nuke/smokes/heave_smoke.mp4'
+            ],
+            'Hut Smoke' :[
+              'lib/images/nuke/smokes/hut_smoke.png',
+              'lib/images/nuke/smokes/hut_smoke1.png',
+              'lib/images/nuke/smokes/hut_smoke.mp4'
+            ],
+            'Outside Smokes':[
+              'lib/images/nuke/smokes/outside_smokes.png',
+              'lib/images/nuke/smokes/outside_smokes1.png',
+              'lib/images/nuke/smokes/outside_smokes.mp4'
+            ],
+            'Site Smoke':[
+              'lib/images/nuke/smokes/site_smoke.png',
+              'lib/images/nuke/smokes/site_smoke1.png',
+              'lib/images/nuke/smokes/site_smoke.mp4'
+            ],
+            'Take Main Smoke':[
+              'lib/images/nuke/smokes/take_main_smoke.png',
+              'lib/images/nuke/smokes/take_main_smoke1.png',
+              'lib/images/nuke/smokes/take_main_smoke.mp4'
+            ]
           },
           'B': {
-            'B1': 'Smoke',
-            'B2': 'Smoke',
-            'B3': 'Smoke',
+            'Ramp Smoke': [
+              'lib/images/nuke/smokes/ramp_smoke.png',
+              'lib/images/nuke/smokes/ramp_smoke1.png',
+              'lib/images/nuke/smokes/ramp_smoke.mp4'
+            ],
+            'Secret Smoke': [
+              'lib/images/nuke/smokes/secret_smoke.png',
+              'lib/images/nuke/smokes/secret_smoke1.png',
+              'lib/images/nuke/smokes/secret_smoke.mp4'
+            ],
+            'Vent Rush': [
+              'lib/images/nuke/smokes/vent_rush.png',
+              'lib/images/nuke/smokes/vent_rush1.png',
+              'lib/images/nuke/smokes/vent_rush.mp4'
+            ],
           },
         },
         'Flashes': {
           'A': {
-            'A1': 'Flash',
-            'A2': 'Flash',
-            'A3': 'Flash',
+            'A Flash From Hut': [
+              'lib/images/nuke/flashes/a_flash_from_hut.png',
+              'lib/images/nuke/flashes/a_flash_from_hut1.png',
+              'lib/images/nuke/flashes/a_flash_from_hut.mp4'
+            ],
+            'A Flash From Squicky': [
+              'lib/images/nuke/flashes/a_flash_from_squeaky.png',
+              'lib/images/nuke/flashes/a_flash_from_squeaky1.png',
+              'lib/images/nuke/flashes/a_flash_from_squeaky.mp4'
+            ],
+            'Retake A Flash': [
+              'lib/images/nuke/flashes/retake_a.png',
+              'lib/images/nuke/flashes/retake_a1.png',
+              'lib/images/nuke/flashes/retake_a.mp4'
+            ],
+            'Support Outside': [
+              'lib/images/nuke/flashes/support_outside.png',
+              'lib/images/nuke/flashes/support_outside1.png',
+              'lib/images/nuke/flashes/support_outside.mp4'
+            ]
           },
           'B': {
-            'B1': 'Flash',
-            'B2': 'Flash',
-            'B3': 'Flash',
+            'Ramp Flash': [
+              'lib/images/nuke/flashes/ramp_flash.png',
+              'lib/images/nuke/flashes/ramp_flash1.png',
+              'lib/images/nuke/flashes/ramp_flash.mp4'
+            ],
+            'Retake B from Ramp': [
+              'lib/images/nuke/flashes/retake_b_from_ramp.png',
+              'lib/images/nuke/flashes/retake_b_from_ramp1.png',
+              'lib/images/nuke/flashes/retake_b_from_ramp.mp4'
+            ],
+            'Retake B': [
+              'lib/images/nuke/flashes/retake_b.png',
+              'lib/images/nuke/flashes/retake_b1.png',
+              'lib/images/nuke/flashes/retake_b.mp4'
+            ],
+            'Trophy Flash': [
+              'lib/images/nuke/flashes/trophy_flash.mp4'
+            ]
           },
         },
+        'Mollys':{
+          'A':{
+            'A Site Molly':[
+              'lib/images/nuke/mollys/a_site_molly.png',
+              'lib/images/nuke/mollys/a_site_molly1.png',
+              'lib/images/nuke/mollys/a_site_molly.mp4'
+            ],
+            'Fast Hut Molly':[
+              'lib/images/nuke/mollys/fast_hut_molly.png',
+              'lib/images/nuke/mollys/fast_hut_molly1.png',
+              'lib/images/nuke/mollys/fast_hut_molly.mp4'
+            ],
+            'Molly Hut':[
+              'lib/images/nuke/mollys/molly_hut.png',
+              'lib/images/nuke/mollys/molly_hut1.png',
+              'lib/images/nuke/mollys/molly_hut.mp4'
+            ]
+          },
+          'B':{
+            '' : []
+          }
+        }
      }),
      strats: Map<String, dynamic>.from({
        'A': {
