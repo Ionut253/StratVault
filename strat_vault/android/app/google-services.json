@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "587596223692",
+    "project_id": "stratvault",
+    "storage_bucket": "stratvault.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:587596223692:android:010f98530ff0f41f4cde69",
+        "android_client_info": {
+          "package_name": "com.example.strat_vault"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbs3MfU_XQ0lo3IufQbWggyz4sAV1YWWE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
