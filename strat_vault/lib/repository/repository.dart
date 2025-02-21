@@ -350,10 +350,10 @@ CSMap(name: 'Nuke', imagePath: 'lib/images/maps/nuke.jpg',
               'lib/images/nuke/flashes/a_flash_from_hut1.png',
               'lib/images/nuke/flashes/a_flash_from_hut.mp4'
             ],
-            'A Flash From Squicky': [
-              'lib/images/nuke/flashes/a_flash_from_squeaky.png',
-              'lib/images/nuke/flashes/a_flash_from_squeaky1.png',
-              'lib/images/nuke/flashes/a_flash_from_squeaky.mp4'
+            'A Flash From Squeaky': [
+              'lib/images/nuke/flashes/a_flash_from_squicky.png',
+              'lib/images/nuke/flashes/a_flash_from_squicky1.png',
+              'lib/images/nuke/flashes/a_flash_from_squicky.mp4'
             ],
             'Retake A Flash': [
               'lib/images/nuke/flashes/retake_a.png',
@@ -400,8 +400,6 @@ CSMap(name: 'Nuke', imagePath: 'lib/images/maps/nuke.jpg',
               'lib/images/nuke/mollys/fast_hut_molly.mp4'
             ],
             'Molly Hut':[
-              'lib/images/nuke/mollys/molly_hut.png',
-              'lib/images/nuke/mollys/molly_hut1.png',
               'lib/images/nuke/mollys/molly_hut.mp4'
             ]
           },
@@ -411,18 +409,6 @@ CSMap(name: 'Nuke', imagePath: 'lib/images/maps/nuke.jpg',
         }
      }),
      strats: Map<String, dynamic>.from({
-       'A': {
-          'execA': ['lib/images/callouts/callouts_anubis.png', 'lib/images/callouts/inferno_callouts.png', 'lib/images/LampaArsa.mp4'],
-          'fakeB': ['lib/images/callouts/callouts_anubis.png', 'lib/images/callouts/inferno_callouts.png', 'lib/images/LampaArsa.mp4'],
-          'fakec': ['lib/images/callouts/callouts_anubis.png', 'lib/images/callouts/inferno_callouts.png', 'lib/images/LampaArsa.mp4'],
-          'faked': ['lib/images/callouts/callouts_anubis.png', 'lib/images/callouts/inferno_callouts.png', 'lib/images/LampaArsa.mp4'],
-          'fakee': ['lib/images/callouts/callouts_anubis.png', 'lib/images/callouts/inferno_callouts.png', 'lib/images/LampaArsa.mp4'],
-          
-        },
-        'B': {
-          'strat1': ['lib/images/callouts/callouts_anubis.png', 'lib/images/callouts/inferno_callouts.png', 'lib/images/LampaArsa.mp4'],
-          'strat2': ['lib/images/callouts/callouts_anubis.png', 'lib/images/callouts/inferno_callouts.png', 'lib/images/LampaArsa.mp4'],
-        },
       }),
 
      ),
@@ -431,42 +417,167 @@ CSMap(name: 'Train', imagePath: 'lib/images/maps/train.jpg',
      utils: Map<String, dynamic>.from({
         'Smokes': {
           'A': {
-            'A1': 'Smoke',
-            'A2': 'Smoke',
-            'A3': 'Smoke',
+            'A Site Smoke': [
+              'lib/images/train/smokes/a_site_smoke.png',
+              'lib/images/train/smokes/a_site_smoke1.png',
+              'lib/images/train/smokes/a_site_smoke.mp4'
+            ],
+            'Camera Smoke from Hall': [
+              'lib/images/train/smokes/camera_smoke_from_hall.png',
+              'lib/images/train/smokes/camera_smoke_from_hall1.png',
+              'lib/images/train/smokes/camera_smoke_from_hall.mp4'
+            ],
+            'Camera Smoke from Wall': [
+              'lib/images/train/smokes/camera_smoke_from_wall.png',
+              'lib/images/train/smokes/camera_smoke_from_wall1.png',
+              'lib/images/train/smokes/camera_smoke_from_wall.mp4'
+            ],
+            'Camera Smoke':[
+              'lib/images/train/smokes/camera_smoke.png',
+              'lib/images/train/smokes/camera_smoke1.png',
+              'lib/images/train/smokes/camera_smoke.mp4'
+            ],
+            'Connector Smoke': [
+              'lib/images/train/smokes/connector_smoke_2.png',
+              'lib/images/train/smokes/connector_smoke21.png',
+              'lib/images/train/smokes/connector_smoke_2.mp4'
+            ],
+            'Connector Smoke from Ladder':[
+              'lib/images/train/smokes/connector_smoke_from_ladder.png',
+              'lib/images/train/smokes/connector_smoke_from_ladder1.png',
+              'lib/images/train/smokes/connector_smoke_from_ladder.mp4'
+            ],
+            'Connector Smoke from Spawn':[
+              'lib/images/train/smokes/connector_smoke.png',
+              'lib/images/train/smokes/connector_smoke1.png',
+              'lib/images/train/smokes/connector_smoke.mp4'
+            ],
+            'Ivy Smoke':[
+              'lib/images/train/smokes/ivy_smoke.png',
+              'lib/images/train/smokes/ivy_smoke1.png',
+              'lib/images/train/smokes/ivy_smoke.mp4'
+            ],
+            'Main Smoke from Base':[
+              'lib/images/train/smokes/main_smoke.png',
+              'lib/images/train/smokes/main_smoke1.png',
+              'lib/images/train/smokes/main_smoke.mp4'
+            ],
+            'Main Smoke from Backsite':[
+              'lib/images/train/smokes/main_smoke_from_backsite.png',
+              'lib/images/train/smokes/main_smoke_from_backsite1.png',
+              'lib/images/train/smokes/main_smoke_from_backsite.mp4'
+            ],
+            'Pop Dog Smoke':[
+              'lib/images/train/smokes/pop_dog_smoke.png',
+              'lib/images/train/smokes/pop_dog_smoke1.png',
+              'lib/images/train/smokes/pop_dog_smoke.mp4'
+            ],
+            'Red Smoke':[
+              'lib/images/train/smokes/red_smoke.png',
+              'lib/images/train/smokes/red_smoke1.png',
+              'lib/images/train/smokes/red_smoke.mp4'
+            ],
+            'Red Train Smoke':[
+              'lib/images/train/smokes/red_train_smoke.png',
+              'lib/images/train/smokes/red_train_smoke1.png',
+              'lib/images/train/smokes/red_train_smoke.mp4'
+            ],
+            'Right Ivy Smoke':[
+              'lib/images/train/smokes/right_ivy_smoke.png',
+              'lib/images/train/smokes/right_ivy_smoke1.png',
+              'lib/images/train/smokes/right_ivy_smoke.mp4'
+            ]
           },
           'B': {
-            'B1': 'Smoke',
-            'B2': 'Smoke',
-            'B3': 'Smoke',
+            'Back Site Smoke': [
+              'lib/images/train/smokes/back_site_smoke.png',
+              'lib/images/train/smokes/back_site_smoke1.png',
+              'lib/images/train/smokes/back_site_smoke.mp4'
+            ],
+            'Connector Smoke': [
+              'lib/images/train/smokes/connector_b_smoke.png',
+              'lib/images/train/smokes/connector_b_smoke.mp4'
+            ],
+            'Ramp Smoke':[
+              'lib/images/train/smokes/ramp_smoke.png',
+              'lib/images/train/smokes/ramp_smoke1.png',
+              'lib/images/train/smokes/ramp_smoke.mp4'
+            ],
+            'Site Smoke':[
+              'lib/images/train/smokes/site_b_smoke.png',
+              'lib/images/train/smokes/site_b_smoke1.png',
+              'lib/images/train/smokes/site_b_smoke.mp4'
+            ],
+            'Upper B Lurk Smoke':[
+              'lib/images/train/smokes/upper_b_lurk_smoke.png',
+              'lib/images/train/smokes/upper_b_lurk_smoke1.png',
+              'lib/images/train/smokes/upper_b_lurk_smoke.mp4'
+            ]
           },
         },
         'Flashes': {
           'A': {
-            'A1': 'Flash',
-            'A2': 'Flash',
-            'A3': 'Flash',
+            'A Flash from Main': [
+              'lib/images/train/flashes/a_flash_from_main.mp4'
+            ],
+            'A Flash': [
+              'lib/images/train/flashes/a_flash.png',
+              'lib/images/train/flashes/a_flash1.png',
+              'lib/images/train/flashes/a_flash.mp4'
+            ],
+            'Main Flash': [
+              'lib/images/train/flashes/main_flash.png',
+              'lib/images/train/flashes/main_flash1.png',
+              'lib/images/train/flashes/main_flash.mp4'
+            ],
           },
           'B': {
-            'B1': 'Flash',
-            'B2': 'Flash',
-            'B3': 'Flash',
+            'B Flash': [
+              'lib/images/train/flashes/b_flash.png',
+              'lib/images/train/flashes/b_flash1.png',
+              'lib/images/train/flashes/b_flash.mp4'
+            ],
+            'Another B Flash': [
+              'lib/images/train/flashes/another_b_flash.png',
+              'lib/images/train/flashes/another_b_flash.mp4'
+            ],
+            'Ramp Push': [
+              'lib/images/train/flashes/ramp_push.png',
+              'lib/images/train/flashes/ramp_push1.png',
+              'lib/images/train/flashes/ramp_push.mp4'
+            ],
           },
         },
-     }),
+        'Mollys':{
+          'A': {
+            'Back Site Molly':[
+              'lib/images/train/mollys/back_site_molly.mp4'
+            ],
+            'Electric Molly':[
+              'lib/images/train/mollys/electric_molly.mp4'
+            ],
+            'Main Molly':[
+              'lib/images/train/mollys/main_molly.mp4'
+            ],
+            'Retake A Molly':[
+              'lib/images/train/mollys/retake_a_molly.png',
+              'lib/images/train/mollys/retake_a_molly1.png',
+              'lib/images/train/mollys/retake_a_molly.mp4'
+            ]
+          },
+          'B': {
+            'B Site Molly':[
+              'lib/images/train/mollys/b_site_molly.png',
+              'lib/images/train/mollys/b_site_molly1.png',
+              'lib/images/train/mollys/b_site_molly.mp4'
+            ],
+            'Site Molly':[
+              'lib/images/train/mollys/site_molly.mp4'
+            ]
+          }
+        }
+      }),
      strats: Map<String, dynamic>.from({
-       'A': {
-          'execA': ['lib/images/callouts/callouts_anubis.png', 'lib/images/callouts/inferno_callouts.png', 'lib/images/LampaArsa.mp4'],
-          'fakeB': ['lib/images/callouts/callouts_anubis.png', 'lib/images/callouts/inferno_callouts.png', 'lib/images/LampaArsa.mp4'],
-          'fakec': ['lib/images/callouts/callouts_anubis.png', 'lib/images/callouts/inferno_callouts.png', 'lib/images/LampaArsa.mp4'],
-          'faked': ['lib/images/callouts/callouts_anubis.png', 'lib/images/callouts/inferno_callouts.png', 'lib/images/LampaArsa.mp4'],
-          'fakee': ['lib/images/callouts/callouts_anubis.png', 'lib/images/callouts/inferno_callouts.png', 'lib/images/LampaArsa.mp4'],
-          
-        },
-        'B': {
-          'strat1': ['lib/images/callouts/callouts_anubis.png', 'lib/images/callouts/inferno_callouts.png', 'lib/images/LampaArsa.mp4'],
-          'strat2': ['lib/images/callouts/callouts_anubis.png', 'lib/images/callouts/inferno_callouts.png', 'lib/images/LampaArsa.mp4'],
-        },
      }),
 
      ),
@@ -475,7 +586,7 @@ CSMap(name: 'Overpass', imagePath: 'lib/images/maps/overpass.jpg',
      utils: Map<String, dynamic>.from({
         'Smokes': {
           'A': {
-            'A1': 'Smoke',
+            'A1': {'Smoke', 'Molly', 'Flash' , 'Smoke1', 'Molly1', 'Flash1'},
             'A2': 'Smoke',
             'A3': 'Smoke',
           },
@@ -499,18 +610,6 @@ CSMap(name: 'Overpass', imagePath: 'lib/images/maps/overpass.jpg',
         },
      }),
      strats: Map<String, dynamic>.from({
-       'A': {
-          'execA': ['lib/images/callouts/callouts_anubis.png', 'lib/images/callouts/inferno_callouts.png', 'lib/images/LampaArsa.mp4'],
-          'fakeB': ['lib/images/callouts/callouts_anubis.png', 'lib/images/callouts/inferno_callouts.png', 'lib/images/LampaArsa.mp4'],
-          'fakec': ['lib/images/callouts/callouts_anubis.png', 'lib/images/callouts/inferno_callouts.png', 'lib/images/LampaArsa.mp4'],
-          'faked': ['lib/images/callouts/callouts_anubis.png', 'lib/images/callouts/inferno_callouts.png', 'lib/images/LampaArsa.mp4'],
-          'fakee': ['lib/images/callouts/callouts_anubis.png', 'lib/images/callouts/inferno_callouts.png', 'lib/images/LampaArsa.mp4'],
-          
-        },
-        'B': {
-          'strat1': ['lib/images/callouts/callouts_anubis.png', 'lib/images/callouts/inferno_callouts.png', 'lib/images/LampaArsa.mp4'],
-          'strat2': ['lib/images/callouts/callouts_anubis.png', 'lib/images/callouts/inferno_callouts.png', 'lib/images/LampaArsa.mp4'],
-        },
      }),
 
      ),
