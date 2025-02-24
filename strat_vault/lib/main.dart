@@ -1,16 +1,16 @@
+import 'package:firebase_app_check/firebase_app_check.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:provider/provider.dart';
+import 'package:strat_vault/firebase_options.dart';
 import 'package:strat_vault/pages/home_page.dart';
 import 'package:strat_vault/pages/intro_page.dart';
+import 'package:strat_vault/pages/test_page.dart';
 import 'package:strat_vault/repository/firestore.dart';
 
 void main() async{
-
-  FirestoreService firestoreService = FirestoreService();
-
-  await firestoreService.fetchImage();
 
   WidgetsFlutterBinding.ensureInitialized();
   if (kIsWeb) {
@@ -24,8 +24,19 @@ void main() async{
       measurementId: "G-KX05XCTCPQ"));
   }
   
-  await Firebase.initializeApp();
-  runApp(const MyApp());
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  await FirebaseAppCheck.instance.activate(
+  androidProvider: AndroidProvider.playIntegrity,
+  appleProvider: AppleProvider.deviceCheck,
+);
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => FirestoreService(),
+      child: const MyApp(),
+    )
+  );
 
 }
 
@@ -42,7 +53,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
           useMaterial3: true,
         ),
-        home: const IntroPage(),
+        home: const TestPage(),
         routes: {
           '/intropage': (context) => const IntroPage(),
           '/homepage': (context) => const HomePage(),

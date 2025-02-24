@@ -16,7 +16,8 @@ class _VideoPlayerWidgetState extends State<VideoPlayerWidget> {
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.asset(widget.videoPath)
+    // ignore: deprecated_member_use
+    _controller = VideoPlayerController.network(widget.videoPath)
       ..initialize().then((_) {
         setState(() {}); // Refresh UI after initialization
         _controller.play();
